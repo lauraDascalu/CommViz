@@ -19,8 +19,8 @@ The program begins by accepting a user-provided URL, which is parsed into:
 ### 🔹 Processing the Server Response and Saving the Data to a File
 
 The server responds with an HTTP message consisting of **headers** and a **body**.  
-The client program reads the response, searching for the header-body separator (`\r\n\r\n`), which indicates the end of the headers.  
-Only the data following this separator is written to the output file, using the previously extracted filename.
+The client reads the response and searches for the header-body separator, which is an empty line (\r\n\r\n).  
+The data after this separator (the actual file content) is written to the output file, using the filename extracted earlier from the URL.
 
 ---
 
